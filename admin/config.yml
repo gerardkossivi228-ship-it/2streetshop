@@ -3,8 +3,8 @@
   repo: gerardkossivi228-ship-it/2streetshop
   branch: main
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: assets/uploads
+public_folder: /assets/uploads
 
 locale: "fr"
 
