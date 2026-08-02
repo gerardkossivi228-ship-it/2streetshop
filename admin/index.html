@@ -1,12 +1,72 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2 STREET — Administration</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2 STREET — Fashion, Watches, Apple</title>
+<meta name="description" content="2 STREET — Fashion, montres et téléphones Apple au Togo. Style urbain, livraison rapide, paiement à la livraison." />
+<link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <!-- Charge Decap CMS (anciennement Netlify CMS) -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <header class="site-header">
+    <div class="brand-block">
+      <div class="brand-mark">2</div>
+      <div>
+        <div class="brand-title">2 STREET</div>
+        <div class="brand-sub">Fashion · Watches · Apple</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>FASHION</span><span>•</span><span>WATCHES</span><span>•</span><span>APPLE</span><span>•</span>
+      <span>LIVRAISON RAPIDE AU TOGO</span><span>•</span><span>PAIEMENT À LA LIVRAISON</span><span>•</span>
+      <span>FASHION</span><span>•</span><span>WATCHES</span><span>•</span><span>APPLE</span><span>•</span>
+      <span>LIVRAISON RAPIDE AU TOGO</span><span>•</span><span>PAIEMENT À LA LIVRAISON</span><span>•</span>
+    </div>
+  </div>
+
+  <div class="hero-title">
+    <h1 class="display">2 <span class="accent">STREET</span></h1>
+    <p>Le style de la rue, sans compromis. Vêtements, montres et iPhone — direct à Lomé.</p>
+  </div>
+
+  <nav class="quick-nav">
+    <a href="#section-fashion">Fashion</a>
+    <a href="#section-watches">Watches</a>
+    <a href="#section-phones">Apple</a>
+  </nav>
+
+  <h2 class="section-title" id="section-fashion"><span class="display">Fashion</span></h2>
+  <div class="product-grid" id="grid-fashion">
+    <div class="empty-state">Chargement…</div>
+  </div>
+
+  <h2 class="section-title" id="section-watches"><span class="display">Watches</span></h2>
+  <div class="product-grid" id="grid-watches">
+    <div class="empty-state">Chargement…</div>
+  </div>
+
+  <h2 class="section-title" id="section-phones"><span class="display">Apple</span></h2>
+  <div class="product-grid" id="grid-phones">
+    <div class="empty-state">Chargement…</div>
+  </div>
+
+  <footer class="site-footer">
+    <h3>Service client</h3>
+    <p class="muted">Lun – Sam : 8h – 20h</p>
+    <p class="contact">+228 91 55 45 71</p>
+
+    <h3 style="margin-top:1.5rem;">Nos engagements</h3>
+    <p class="muted">✦ Livraison rapide partout au Togo</p>
+    <p class="muted">✦ Paiement à la livraison</p>
+    <p class="muted">✦ Retour sous 7 jours</p>
+
+    <p class="muted" style="margin-top:2rem;">© 2026 2 STREET. Tous droits réservés.</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
