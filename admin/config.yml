@@ -1,13 +1,13 @@
 
 backend:
   name: github
-  repo: gerardkossivi228-ship-it/2streets
+  repo: gerardkossivi228-ship-it/2streetshop 
   branch: main
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: assets/uploads
+public_folder: /assets/uploads
 
-locale: "fr"
+locale: fr
 
 # IMPORTANT : ici on utilise des collections de type "files" (un seul
 # fichier JSON par catÃ©gorie), pas "folder" (un fichier par produit).
