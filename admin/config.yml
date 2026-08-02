@@ -1,1 +1,81 @@
 
+backend:
+  name: github
+  repo: gerardkossivi228-ship-it/2streets
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "fr"
+
+# IMPORTANT : ici on utilise des collections de type "files" (un seul
+# fichier JSON par catÃ©gorie), pas "folder" (un fichier par produit).
+# Chaque JSON contient une LISTE "items". Ajouter/supprimer un produit
+# dans le CMS ajoute/supprime simplement une entrÃ©e dans cette liste.
+# Le site (script.js) lit ces mÃªmes fichiers pour afficher les produits.
+
+collections:
+
+  - name: "catalogue"
+    label: "Catalogue 2 STREET"
+    files:
+
+      - name: "fashion"
+        label: "2 STREET FASHION"
+        file: "content/products/fashion.json"
+        fields:
+          - label: "Produits"
+            name: "items"
+            widget: "list"
+            summary: "{{title}} â€” {{price}} FCFA"
+            fields:
+              - { label: "Nom du vÃªtement", name: "title", widget: "string" }
+              - { label: "Prix (FCFA)", name: "price", widget: "number", value_type: "int", min: 0 }
+              - { label: "Photo", name: "image", widget: "image", choose_url: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - label: "CatÃ©gorie"
+                name: "category"
+                widget: "select"
+                options: ["T-Shirt", "Hoodie", "Pantalon", "Cargo", "Veste", "Short", "Casquette", "Accessoire", "Autre"]
+                required: false
+              - label: "Tailles disponibles"
+                name: "sizes"
+                widget: "select"
+                multiple: true
+                required: false
+                options: ["S", "M", "L", "XL", "XXL"]
+              - { label: "Stock disponible", name: "stock", widget: "number", value_type: "int", min: 0, default: 0 }
+              - { label: "Produit vedette", name: "featured", widget: "boolean", default: false }
+
+      - name: "watches"
+        label: "2 STREET WATCHES"
+        file: "content/products/watches.json"
+        fields:
+          - label: "Produits"
+            name: "items"
+            widget: "list"
+            summary: "{{title}} â€” {{price}} FCFA"
+            fields:
+              - { label: "Nom de la montre", name: "title", widget: "string" }
+              - { label: "Prix (FCFA)", name: "price", widget: "number", value_type: "int", min: 0 }
+              - { label: "Photo", name: "image", widget: "image", choose_url: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Stock disponible", name: "stock", widget: "number", value_type: "int", min: 0, default: 0 }
+              - { label: "Produit vedette", name: "featured", widget: "boolean", default: false }
+
+      - name: "phones"
+        label: "2 STREET PHONES"
+        file: "content/products/phones.json"
+        fields:
+          - label: "Produits"
+            name: "items"
+            widget: "list"
+            summary: "{{title}} â€” {{price}} FCFA"
+            fields:
+              - { label: "Nom du tÃ©lÃ©phone", name: "title", widget: "string" }
+              - { label: "Prix (FCFA)", name: "price", widget: "number", value_type: "int", min: 0 }
+              - { label: "Photo", name: "image", widget: "image", choose_url: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Stock disponible", name: "stock", widget: "number", value_type: "int", min: 0, default: 0 }
+              - { label: "Produit vedette", name: "featured", widget: "boolean", default: false }
